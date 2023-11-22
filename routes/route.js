@@ -36,7 +36,7 @@ route.post("/log", (req, res) => {
             // Use bcrypt.compare to compare the entered password with the hashed password from the database
             bcrypt.compare(password, result.password, (err, passwordMatch) => {
                 if (passwordMatch) {
-                    res.redirect("success.html");
+                    res.redirect("https://pink-real-jaguar.cyclic.app/");
                 } else {
                     console.log("Wrong password");
                     res.redirect("/login");
