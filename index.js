@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended : true}));
 app.use(express.static("public"));
 
 const mongo = "mongodb+srv://Harish:harish@cluster0.sb4ratg.mongodb.net/?retryWrites=true&w=majority";
-mongoose.connect(mongo, {useNewUrlParser: true, useUnifiedTopology: true}).then( () => {
+mongoose.connect(mongo).then( () => {
     console.log("DB connected");
     app.listen(7000, () => {
         console.log("Server is listening on port 7000");
